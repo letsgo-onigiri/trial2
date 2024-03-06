@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>フォームに入力された数値の取得</title>
+</head>
+ 
+<body>
+    <form>
+        <label for="textForm">購入予定額: </label>
+        <input type="text" id="textForm">
+         
+        <button id="button">必要なガス代を計算する</button>
+    </form>
+ 
+    <label for="resultForm1">最終的に必要なETH: </label>
+    <input type="text" id="resultForm1">
+    
+    <br>
+    
+    <label for="resultForm2">最終的に必要なBNB: </label>
+    <input type="text" id="resultForm2">
+    
+    <br>
+    
+    <label for="resultForm3">購入可能なKOIトークン: </label>
+    <input type="text" id="resultForm3">
+
+    <br>
+ 
+    <label for="resultForm4">ガス代 ETH: </label>
+    <input type="text" id="resultForm4">
+    
+    <br>
+ 
+    <label for="resultForm5">ガス代 BNB: </label>
+    <input type="text" id="resultForm5">
+    
+    
+    
+</body>
+ 
+<script>
+ 
+    // ボタンの要素を取得
+    var button = document.getElementById("button");
+ 
+    // ボタンをクリックした時の処理
+    button.addEventListener("click", function(e) {
+ 
+        e.preventDefault();
+ 
+    // 1つの入力フォームの値を取得 textform
+    var textForm = document.getElementById("textForm").value;
+        
+    // 2つの数値を足す result1
+    var result1 = parseInt(textForm,10) + parseInt(100);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm1");
+    resultForm1.value = result1;
+        
+    // 2つの数値を足す result2
+    var result2 = parseInt(textForm,10) + parseInt(100);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm2");
+    resultForm2.value = result2;
+                
+    // 2つの数値を足す result3
+    var result3 = parseInt(textForm,10) + parseInt(100);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm3");
+    resultForm3.value = result3;
+            
+    // 2つの数値を足す result4
+    var result4 = parseInt(textForm,10) + parseInt(100);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm4");
+    resultForm4.value = result4;
+                   
+    // 2つの数値を足す result5
+    var result5 = parseInt(textForm,10) + parseInt(100);
+ 
+    // 足し算の結果を別の入力フォームに表示
+    var resultForm = document.getElementById("resultForm5");
+    resultForm5.value = result5;
+        
+
+});
+ 
+</script>
+ 
+</html>
